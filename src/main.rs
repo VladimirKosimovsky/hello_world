@@ -1,8 +1,6 @@
-
 #[tokio::main]
 async fn main() -> Result<(), Box<(dyn std::error::Error)>> {
-    let client = reqwest::Client::builder()
-        .build()?;
+    let client = reqwest::Client::builder().build()?;
 
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert("Content-Type", "application/json".parse()?);
@@ -15,7 +13,8 @@ async fn main() -> Result<(), Box<(dyn std::error::Error)>> {
 
     let json: serde_json::Value = serde_json::from_str(&data)?;
 
-    let request = client.request(reqwest::Method::POST, "http://localhost:11434/api/generate")
+    let request = client
+        .request(reqwest::Method::POST, "http://localhost:11434/api/generate")
         .headers(headers)
         .json(&json);
 
