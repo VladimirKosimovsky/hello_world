@@ -12,8 +12,8 @@ enum Role {
 
 fn main() {
 
-    use crate::Stage::{Beginner, Advanced};
-    use crate::Role::*;
+    // use crate::Stage::{Beginner, Advanced};
+    // use crate::Role::*;
 
     let stage = Beginner;
 
