@@ -15,9 +15,12 @@ enum Color {
 }
 
 fn main() {
-    println!("Zero is {}", Number::Zero as i32);
-    println!("One is {}", Number::One as i32);
+    use crate::Color::*;
+    use crate::Number::*;
 
-    println!("Roses are #{:06x}", Color::Red as i32);
-    println!("Violets are #{:06x}", Color::Blue as i32);
+    println!("Zero is {}", Zero as i32);
+    println!("One is {}", One as i32);
+
+    println!("Roses are #{:06x}", Red as i32);
+    println!("Violets are #{:06x}", Blue as i32);
 }
